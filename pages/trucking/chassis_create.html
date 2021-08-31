@@ -242,7 +242,7 @@
                   <div class="page-title">
                      <div class="row">
                         <div class="col-6">
-                           <h3>Master Data</h3>
+                           <h3>Master Data - Chassis Info</h3>
                         </div>
                         <div class="col-6">
                            <ol class="breadcrumb">
@@ -252,7 +252,10 @@
 								  </a>
 							  </li>
                               <li class="breadcrumb-item">Trucking</li>
-                              <li class="breadcrumb-item active">Master Data</li>
+                              <li class="breadcrumb-item">
+								  <a href="master-data.html">Master Data</a>
+							  </li>
+							  <li class="breadcrumb-item active">Chassis Info</li>
                            </ol>
                         </div>
                      </div>
@@ -261,95 +264,148 @@
                <!-- Container-fluid starts-->
                <div class="container-fluid">
 				   <div class="row">
-					   <div class="col-sm-12">
-						   <div class="card">
-							   <div class="card-header">
-								   <div class="row">
-									   <div class="col-lg-6">
-										   <h5>Chassis Master</h5>										   
-									   </div>
-									   <div class="col-lg-6 text-end">
-										   <a href="chassis_create.html">
-											   <button class="btn btn-secondary">Create New Record</button>
-										   </a>
-									   </div>
-								   </div>
-							   </div>
-							   <div class="table-responsive">
-								   <table class="table table-lg">
-									   <thead>
-										   <tr>
-											   <th scope="col">#</th>
-											   <th scope="col">Chassis No.</th>
-											   <th scope="col">Reg No.</th>
-											   <th scope="col">Modal No.</th>
-											   <th scope="col">Size</th>
-											   <th scope="col">Height</th>
-											   <th scope="col">Type</th>
-											   <th scope="col">Branch</th>
-											   <th scope="col">Status</th>
-											   <th scope="col">Actions</th>
-										   </tr>
-									   </thead>
-									   <tbody>
-										   <tr>
-											   <th scope="row">1</th>
-											   <td>DE00280</td>
-											   <td></td>
-											   <td></td>
-											   <td>20</td>
-											   <td></td>
-											   <td>Type1</td>
-											   <td>ECT1</td>
-											   <td>Available</td>
-											   <td>
-												   <a href="chassis_view.html">View</a>
-											   </td>
-										   </tr>
-										   <tr>
-											   <th scope="row">2</th>
-											   <td>E001</td>
-											   <td>72-6472</td>
-											   <td></td>
-											   <td>20</td>
-											   <td>1.5</td>
-											   <td>Type1</td>
-											   <td>SCT1</td>
-											   <td>Available</td>
-											   <td>
-												   <a href="chassis_view.html">View</a>
-											   </td>
-										   </tr>
-										   <tr>
-											   <th scope="row">3</th>
-											   <td>E002</td>
-											   <td>71-3068</td>
-											   <td></td>
-											   <td>20</td>
-											   <td>1.5</td>
-											   <td>Type1</td>
-											   <td>ECT1</td>
-											   <td>Available</td>
-											   <td>
-												   <a href="chassis_view.html">View</a>
-											   </td>
-										   </tr>
-										   <tr>
-											   <th scope="row">4</th>
-											   <td>E004</td>
-											   <td>71-3070</td>
-											   <td></td>
-											   <td>20</td>
-											   <td></td>
-											   <td>Type1</td>
-											   <td>ECT1</td>
-											   <td>Available</td>
-											   <td>
-												   <a href="chassis_view.html">View</a>
-											   </td>
-										   </tr>
-									   </tbody>
-								   </table>
+					   <div class="col-sm-12 col-xl-12">
+						   <div class="row">
+							   <div class="col-sm-12">
+								  <div class="card">
+									 <div class="card-header">
+										<h5>Chassis Master</h5>
+									 </div>
+									 <div class="card-body">
+										<form class="theme-form">
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Chassis No.</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Chassis No.">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Reg No.</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Reg No.">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Modal No.</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Modal No.">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Size</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Size">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Height</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Height">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label" for="selectType">Type</label>
+											  <div class="col-sm-3">
+												  <select class="form-select" id="selectType">
+													  <option selected="" disabled="" value="">Select Your Type</option>
+													  <option>Type1</option>
+													  <option>Type2</option>
+												  </select>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label" for="selectBranch">Branch</label>
+											  <div class="col-sm-3">
+												  <select class="form-select" id="selectBranch">
+													  <option selected="" disabled="" value="">Select Your Branch</option>
+													  <option>SCT1</option>
+													  <option>ECT1</option>
+												  </select>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label" for="selectStatus">Status</label>
+											  <div class="col-sm-3">
+												  <select class="form-select" id="selectStatus">
+													  <option selected="" disabled="" value="">Select Your Status</option>
+													  <option>Available</option>
+													  <option>Not Available</option>
+												  </select>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Owner</label>
+											  <div class="col-sm-3">
+												 <input class="form-control" type="text" placeholder="Enter Owner">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">RoadTax Inquiry</label>
+											  <div class="col-sm-3">
+												 <input class="datepicker-here form-control digits" type="text" data-language="en" placeholder="Select Date">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Ins Inquiry</label>
+											  <div class="col-sm-3">
+												 <input class="datepicker-here form-control digits" type="text" data-language="en" placeholder="Select Date">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Inspection</label>
+											  <div class="col-sm-3">
+												 <input class="datepicker-here form-control digits" type="text" data-language="en" placeholder="Select Date">
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Created By</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid"></h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Created Date</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid">13/06/2014</h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3 col-form-label">Modified By</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid"></h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3">Modified Date</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid">13/06/2014</h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3">User ID</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid"></h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3">Created On</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid">13/06/2014</h6>
+											  </div>
+										   </div>
+										   <div class="mb-3 row">
+											  <label class="col-sm-3">Modified On</label>
+											  <div class="col-sm-9">
+												 <h6 class="text-solid">13/06/2014</h6>
+											  </div>
+										   </div>	
+										</form>
+									 </div>
+									 <div class="card-footer text-end">
+										<button class="btn btn-primary">Edit</button>
+										<button class="btn btn-danger">Delete</button>
+									 </div>
+								  </div>
 							   </div>
 						   </div>
 					   </div>
